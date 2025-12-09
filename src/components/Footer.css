@@ -1,0 +1,37 @@
+
+.app-footer {
+    background-color: #ebdcc3;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.footer-content-wrapper {
+    display: flex;
+    justify-content: space-around; 
+    width: 100%;
+}
+
+.footer-copyright {
+    margin-top: auto; 
+    text-align: center;
+}
+
+@media (max-width: 576px) {
+    
+    .footer-content-wrapper {
+        flex-direction: column; 
+        align-items: center; 
+        gap: 25px; 
+    }
+
+    .contact-info, 
+    .question_footer {
+        text-align: center;
+        width: 100%; 
+    }
+
+    .app-footer {
+        padding: 20px 10px; 
+    }
+}

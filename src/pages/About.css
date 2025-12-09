@@ -1,0 +1,75 @@
+/* src/pages/About.css */
+
+.about-page {
+    padding: 40px 5%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5em;
+    color: #5d3a43;
+    text-align: center;
+    margin-bottom: 50px;
+    border-bottom: 3px solid #e6c3d0;
+    padding-bottom: 10px;
+}
+
+/* Contenedor de las dos columnas */
+.about-content-container {
+    display: flex;
+    gap: 40px;
+    line-height: 1.7;
+}
+
+.about-section {
+    flex: 1; /* Distribuye el espacio equitativamente */
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fcfcfc;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.about-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2em;
+    color: #a0526e; /* Rosa oscuro/magenta */
+    margin-bottom: 15px;
+}
+
+/* Estilos de lista */
+.about-section ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.about-section ul li {
+    padding: 5px 0 5px 25px;
+    position: relative;
+}
+
+/* Pequeño checkmark elegante para la lista */
+.about-section ul li::before {
+    content: '🌸'; 
+    position: absolute;
+    left: 0;
+    color: #a0526e;
+}
+
+
+/* --- Responsividad --- */
+@media (max-width: 768px) {
+    .about-content-container {
+        flex-direction: column; /* Apila las secciones en móvil */
+        gap: 20px;
+    }
+    .about-title {
+        font-size: 2.5em;
+        margin-bottom: 30px;
+    }
+    .about-section {
+        padding: 15px;
+    }
+}

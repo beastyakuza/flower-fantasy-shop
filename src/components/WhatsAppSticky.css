@@ -1,0 +1,27 @@
+.whatsapp-sticky {
+    position: fixed; 
+    bottom: 30px; 
+    right: 30px;
+    background-color: #25d366; 
+    border-radius: 50%; 
+    width: 60px;
+    height: 60px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+.whatsapp-icon-img {
+    width: 60px;  
+    height: 60px; 
+    object-fit: contain; 
+    border-radius: 50%; 
+    border: #25d366 solid 2px;
+}
+
+.whatsapp-sticky:hover {
+    transform: scale(1.1);
+}

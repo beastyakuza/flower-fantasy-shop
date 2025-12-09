@@ -1,0 +1,50 @@
+
+.App {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    padding: 20px 0;
+}
+
+.App h1 {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin: 0 0 20px 0;
+    font-size: 2.5em;
+    color: #333;
+    background-image: url("https://static.vecteezy.com/system/resources/previews/002/035/608/non_2x/flowers-on-dark-background-seamless-pattern-vector.jpg");
+    background-size: cover;
+    background-position: center;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 768px) {
+    .App {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    
+    .main-content-wrapper {
+        padding: 0 10px; 
+    }
+    
+    .App {
+        grid-template-columns: 1fr;
+        padding: 15px 0; 
+    }
+    
+    .card {
+        width: 100%;
+        max-width: 100%; 
+    }
+    
+    .App h1 {
+        font-size: 1.8em;
+    }
+}

@@ -1,0 +1,160 @@
+
+.products-page {
+    padding: 20px 5%; 
+    max-width: 1400px; 
+    margin: 0 auto; 
+}
+
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 30px; /* Separación cómoda entre tarjetas */
+    justify-items: center;
+}
+
+.card {
+    background-color: white;
+    color: #333;
+    width: 280px;
+    padding: 0;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* IMAGEN */
+.card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin: 0;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+/* CONTENIDO */
+.card-content {
+    padding: 15px;
+}
+
+/* TÍTULO Y PRECIO */
+.card-title {
+    font-size: 1.4em;
+    font-weight: 600;
+    margin: 8px 0 5px 0;
+    color: #212529;
+}
+
+.card .unit-price {
+    font-size: 1.1em;
+    font-weight: 700;
+    color: #333; /* Color neutro para precio unitario */
+    margin-bottom: 5px;
+}
+
+.card .total-price {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #008000; /* Precio total en verde */
+    margin-bottom: 15px;
+}
+
+/* BOTONES DEL CONTADOR */
+.card-counter button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 18px;
+    margin: 0 5px 15px 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1em;
+    transition: background-color 0.2s;
+}
+
+.card-counter button:hover {
+    background-color: #0056b3;
+}
+
+.card-counter .count-display {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333;
+    margin: 0 10px;
+}
+.add-to-cart-button {
+    width: 90%;
+    padding: 10px;
+    margin: 15px 0 15px 0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.1em;
+    background-color: #28a745;
+    color: white;
+    transition: background-color 0.2s ease;
+}
+
+.add-to-cart-button:hover {
+    background-color: #1e7e34;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #3f1e26; /* Color de fondo oscuro */
+    padding: 5px;
+    border-radius: 50%;
+    z-index: 10;
+    line-height: 0;
+}
+
+/* src/components/Card.css */
+/* Responsividad: Pantallas Medianas (Tablets) */
+@media (max-width: 992px) {
+    /* ... (otros estilos) ... */
+    
+    /* Asegurar que las tarjetas sigan viéndose bien en tablets */
+    .category-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 576px) {
+    .card {
+        padding: 10px; /* Reducir el padding interno de la tarjeta */
+    }
+
+    .card-info h3 {
+        font-size: 1.2em; /* Reducir el tamaño del título */
+        margin-bottom: 5px;
+    }
+
+    .card-price {
+        font-size: 1em; /* Reducir el tamaño del precio */
+    }
+
+    .add-to-cart {
+        padding: 8px 10px; /* Reducir el padding del botón */
+        font-size: 0.9em;
+    }
+    .card-icon {
+        top: 5px;
+        right: 5px;
+        padding: 3px;
+    }
+}

@@ -1,0 +1,80 @@
+
+.app-header {
+    position: sticky; 
+    top: 0; 
+    z-index: 999; 
+    width: 100%;
+    background-color: #e2c5cf; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 0;
+}
+
+.app-header-content {
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 1em 20px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.app-header-content h1 {
+    font-size: 1.8em;
+    color: black;
+    margin: 0;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    font-size: 1.1em;
+}
+
+.nav-links li {
+    cursor: pointer;
+}
+
+/* Header.css */
+
+/* --- AJUSTE PARA MÓVILES (Ancho máximo 576px) --- */
+@media (max-width: 576px) {
+    
+    .app-header-content {
+        /* 1. CLAVE: Cambia de fila a columna */
+        flex-direction: column; 
+        
+        /* 2. Centra los elementos apilados (h1 y nav) */
+        align-items: center; 
+        
+        /* Reduce el padding para usar mejor el espacio vertical */
+        padding: 10px 10px;
+    }
+    
+    .app-header-content h1 {
+        /* Aseguramos que el título tenga espacio debajo del menú */
+        margin-bottom: 10px; 
+        font-size: 1.5em; /* Reducir el tamaño del texto para que no desborde */
+    }
+    
+    .nav-links {
+        /* 3. Aseguramos que los ítems del menú se envuelvan si es necesario */
+        flex-wrap: wrap; 
+        justify-content: center; /* Centra los enlaces horizontalmente */
+        gap: 10px; /* Reducir el espacio entre enlaces en móvil */
+        width: 100%; /* Ocupa todo el ancho disponible */
+    }
+    
+    .nav-links li {
+        /* Tamaño de texto más pequeño para enlaces */
+        font-size: 0.9em; 
+    }
+}
+.cart-icon-container {
+    margin-left: 20px; /* Espacio entre el menú y el carrito */
+    cursor: pointer;
+    display: flex; /* Asegura que el icono y el contador se alineen */
+    align-items: center;
+}
