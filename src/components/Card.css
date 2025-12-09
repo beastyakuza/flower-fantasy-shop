@@ -1,4 +1,5 @@
 
+
 .products-page {
     padding: 20px 5%; 
     max-width: 1400px; 
@@ -13,6 +14,7 @@
     justify-items: center;
 }
 
+
 .card {
     background-color: white;
     color: #333;
@@ -23,7 +25,7 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden;
-    position: relative;
+
 }
 
 .card:hover {
@@ -110,6 +112,7 @@
 .add-to-cart-button:hover {
     background-color: #1e7e34;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
 }
 
 .card-icon {

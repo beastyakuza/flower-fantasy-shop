@@ -1,7 +1,11 @@
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
+<<<<<<< HEAD
     background-color: rgb(207, 194, 207); 
+=======
+    background-color: #f4f4f4; 
+>>>>>>> c0b6bc7be45a66cf72e90623f23fbaba75093cc4
     margin: 0;
     padding: 0;
     min-height: 100vh;

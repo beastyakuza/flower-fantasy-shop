@@ -1,3 +1,4 @@
+
 import React from 'react';
 // Asegúrate de importar 'Link' junto con otras importaciones de React Router DOM si las tienes
 import { Link } from 'react-router-dom'; 
