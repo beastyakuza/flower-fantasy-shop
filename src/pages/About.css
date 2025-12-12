@@ -1,75 +1,96 @@
-/* src/pages/About.css */
 
-.about-page {
-    padding: 40px 5%;
-    max-width: 1000px;
+.main-content-wrapper.about-page {
+    max-width: 1100px;
     margin: 0 auto;
+    padding: 40px 20px;
+    background-color: #fcfcfc; 
+    border-radius: 10px;
 }
 
 .about-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 3.5em;
-    color: #5d3a43;
     text-align: center;
+    color: #333;
+    font-size: 3rem;
     margin-bottom: 50px;
-    border-bottom: 3px solid #e6c3d0;
+    font-weight: 300; 
+    border-bottom: 3px solid #9bc7a8; 
+    display: inline-block;
     padding-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* Contenedor de las dos columnas */
+
 .about-content-container {
     display: flex;
     gap: 40px;
-    line-height: 1.7;
+    margin-top: 30px;
 }
 
 .about-section {
-    flex: 1; /* Distribuye el espacio equitativamente */
-    padding: 20px;
-    border-radius: 8px;
-    background-color: #fcfcfc;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    flex: 1;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
 .about-section h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2em;
-    color: #a0526e; /* Rosa oscuro/magenta */
-    margin-bottom: 15px;
+    font-size: 2rem;
+    color: #9bc7a8; 
+    margin-bottom: 20px;
+    font-weight: 600;
 }
 
-/* Estilos de lista */
-.about-section ul {
-    list-style-type: none;
-    padding: 0;
-    margin-top: 15px;
+.about-section p {
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+    font-size: 1.05rem;
 }
 
-.about-section ul li {
-    padding: 5px 0 5px 25px;
+.about-section strong {
+    color: #333;
+    font-weight: 700;
+}
+
+
+.quality-section ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+.quality-section ul li {
+    margin-bottom: 10px;
+    padding-left: 25px;
     position: relative;
+    color: #333;
+    line-height: 1.5;
 }
 
-/* Pequeño checkmark elegante para la lista */
-.about-section ul li::before {
-    content: '🌸'; 
+.quality-section ul li::before {
+    content: '✓'; 
+    color: #e91e63; 
+    font-weight: bold;
+    font-size: 1.2rem;
     position: absolute;
     left: 0;
-    color: #a0526e;
+    top: 0;
 }
 
-
-/* --- Responsividad --- */
 @media (max-width: 768px) {
     .about-content-container {
-        flex-direction: column; /* Apila las secciones en móvil */
-        gap: 20px;
+        flex-direction: column;
+        gap: 25px;
     }
+
     .about-title {
-        font-size: 2.5em;
+        font-size: 2rem;
         margin-bottom: 30px;
     }
+    
     .about-section {
-        padding: 15px;
+        padding: 25px;
     }
 }

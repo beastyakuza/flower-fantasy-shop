@@ -3,7 +3,6 @@ const Footer = () => {
   return (
     <footer className="app-footer">
       
-      {/* 1. Nuevo contenedor que agrupa todo el contenido superior */}
       <div className='footer-content-wrapper'>
           <div className='contact-info'>
               <h2>CONTACT US</h2>

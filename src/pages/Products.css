@@ -1,95 +1,50 @@
-/* src/pages/Products.css */
 
-.products-page {
-    padding: 20px 5%;
-    max-width: 1300px; /* Aumentamos un poco el ancho */
+.main-content-wrapper.products-page {
+    max-width: 1400px; 
     margin: 0 auto;
+    padding: 20px;
 }
 
 .products-title {
     text-align: center;
-    margin: 30px 0 50px;
-    font-family: 'Playfair Display', serif;
-    font-size: 3em;
-    color: #5d3a43;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
 }
 
-/* ⬅️ Aumentamos el margen inferior para separar mejor las secciones */
-.product-category-section {
-    margin-bottom: 80px; 
-    padding: 25px 20px; /* Más padding interno */
-    border-radius: 10px;
-    background-color: #fcfcfc; /* Fondo casi blanco para contraste */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Sombra más fuerte */
-    border-left: 5px solid #e6c3d0; /* Borde izquierdo llamativo */
-}
-
-/* --- Títulos de Categoría (Hacemos el texto más grande y vistoso) --- */
 .product-category-section h2 {
-    background-color: #e6c3d0; 
-    color: #3f1e26; 
-    font-family: 'Playfair Display', serif;
-    font-size: 2.8em; /* Más grande */
-    font-weight: 700;
-    padding: 15px 20px;
-    border-radius: 5px;
-    margin-bottom: 40px; /* Más espacio debajo del título */
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: #555;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
 
-/* ⬅️ AJUSTE CLAVE: Reducimos el tamaño mínimo de la tarjeta */
+
 .category-grid {
     display: grid;
-    /* Reducimos el minmax a 220px para que quepan más en la fila */
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
-    gap: 20px; /* Menos espacio entre tarjetas */
-    justify-items: center;
+
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px; 
+    padding: 0; 
+
+    max-width: 1300px; 
+    margin: 0 auto; 
 }
 
-/* Estilos de la Tarjeta dentro de Products.jsx (para hacerla más compacta) */
-/* Debes aplicar una clase específica a las tarjetas de Products */
-.category-grid .card-product {
-    height: auto;
-    min-width: 200px;
-}
-
-/* src/pages/Products.css */
-
-/* ... (Estilos anteriores) ... */
-
-
-/* Responsividad: Pantallas Medianas (Tablets) */
-@media (max-width: 992px) {
-    .products-title {
-        font-size: 2.5em;
-    }
-    .product-category-section h2 {
-        font-size: 2em;
-    }
-    /* El tamaño de la tarjeta sigue siendo pequeño para mantener 3-4 columnas */
+@media (min-width: 768px) and (max-width: 1200px) {
     .category-grid {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        max-width: 950px; 
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 25px;
     }
 }
 
-/* Responsividad: Pantallas Pequeñas (Móviles) */
-@media (max-width: 576px) {
-    .products-page {
-        padding: 10px 5px; /* Menos padding lateral */
-    }
-    .products-title {
-        font-size: 1.8em;
-    }
-    .product-category-section h2 {
-        font-size: 1.5em;
-        margin-bottom: 20px;
-    }
-    /* CLAVE: Una sola columna para que las tarjetas se estiren y se vean completas */
+
+@media (min-width: 1201px) {
     .category-grid {
-        grid-template-columns: 1fr; 
-        gap: 15px;
+         grid-template-columns: repeat(4, 1fr); 
+         max-width: 1300px;
     }
 }
+

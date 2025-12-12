@@ -1,27 +1,19 @@
+import ImageSlider from '../components/ImageSlider';
+import './Home.css';
 
-import Card from '../components/Card';
-import './Home.css'; // Importa los estilos de la rejilla
+const promoImages = [
+    'https://concepto.de/wp-content/uploads/2018/08/Campos-de-mariposas-en-Israel-scaled-e1730740971423.jpg', 
+    'https://img.freepik.com/foto-gratis/produccion-cultivo-flores-muchas-flores-crisantemo-invernadero-plantacion-crisantemo_158595-6963.jpg',   
+    'https://bloglatam.jacto.com/wp-content/uploads/2022/04/produccion-de-flores-925x308.jpeg',      
+];
 
-const Home = ({ products }) => { 
+const Home = () => {
     return (
-        <div className="main-content-wrapper">
-            <section className="App">
-                <h1>Choose Perfection: Discover Our Exclusive Floral Collection, crafted to inspire beauty in every detail.</h1>
-                
-                {products.map((item) => (
-                    <Card
-                        // Usar item.id como key es mejor que usar el index
-                        key={item.id} 
-                        // Usar item.name en lugar de item.title
-                        title={item.name} 
-                        price={item.price}
-                        image={item.image}
-                    />
-                ))}
-            </section>
+        <div className="home-page-container">
+            <ImageSlider images={promoImages} /> 
+            
         </div>
     );
 };
-
 
 export default Home;
